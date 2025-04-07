@@ -1,5 +1,5 @@
 public with sharing class ExpenseController {
-    @AuraEnabled(cahnceable=true)
+    @AuraEnabled(cacheable=true)
     public static List<Expense__c> getExpenses(){
         return [SELECT Name,Amount__c,Category__c,Expense_Date__c FROM Expense__c ORDER BY Expense_Date__c DESC];
 
