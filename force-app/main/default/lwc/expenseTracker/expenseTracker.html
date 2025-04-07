@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Expense Tracker">
+        <div class="slds-p-around_medium">
+            <lightning-input label="Name" value={name} onchange={handleNameChange}></lightning-input>
+            <lightning-input label="Amount" type="number" value={amount} onchange={handleAmountChange}></lightning-input>
+            <lightning-combobox label="Category" value={category} options={categoryOptions} onchange={handleCategoryChange}></lightning-combobox>
+            <lightning-input label="Date" type="date" value={date} onchange={handleDateChange}></lightning-input>
+            <lightning-button label="Add Expense" onclick={handleAddExpense} class="slds-m-top_medium"></lightning-button>
+        </div>
+
+        <template if:true={expenses}>
+            <lightning-datatable key-field="Id" data={expenses} columns="columns"></lightning-datatable>
+        </template>
+    </lightning-card>
+</template>
