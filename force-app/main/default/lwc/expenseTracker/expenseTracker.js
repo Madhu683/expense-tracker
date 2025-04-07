@@ -11,7 +11,7 @@ export default class ExpenseTracker extends LightningElement {
     categoryOptions =[
         { label: 'Food', value: 'Food' },
         { label: 'Travel', value: 'Travel' },
-        { lable: 'Rent', value: 'Rent' },
+        { label: 'Rent', value: 'Rent' },
         { label:'Shopping', value: 'Shopping' },
         { label: 'Other', value: 'Other' }];
 
